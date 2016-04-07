@@ -1,0 +1,39 @@
+<div class="booksPageSideBar">
+  <div class="authorsBooksSideBar">
+    <img class='authorPictureBookPage' src="http://fillmurray.com/100/100"/>
+    <a href='/authors'><h2 class='rotate'>Authors<h2></a>
+  </div>
+  <div class="authorBooksSideBar">
+    <img class='bookPictureBookPage' src="http://fillmurray.com/100/100"/>
+    <a href='/books'><h2 class='rotate'>Books<h2></a>
+  </div>
+</div>
+<form action="/authors" method="POST">
+<div class="authorPageContent">
+  <label>First Name</label><br><input type="text" name="authorEditFirstName" value=""><br><br><br>
+  <label>Last Name</label><br><input type="text" name="authorEditLastName" value=""><br><br><br>
+  <label>Portriat URL</label><br><input type="text" name="authorEditPortriatUrl" value=""><br><br><br>
+  <label>Biography</label><br><textarea name="authorEditBiography" value=""></textarea>
+  <div class="authorEditPageContent">
+    <div class="authorEditBooks">
+      <label>Authors</label><br>
+      <ul>
+        <li>Book 1 <a href='/delete/{{this}}'>Delete</a></li>
+        <li>Book 2 <a href='/delete/{{this}}'>Delete</a></li>
+        <li>Book 3 <a href='/delete/{{this}}'>Delete</a></li>
+      </ul>
+    </div>
+    <br>
+    <div class="selectBox">
+      <select class='authorSelectBox' name='authorEditSelect'>
+        <option value="value1" selected>Author 1</option>
+        <option value="value2">Author 2</option>
+        <option value="value3">Author 3</option>
+      </select>
+      <button type="button" name="addAuthor">Add Author</button>
+    </div>
+  </form>
+    <br><br>
+    <button class='authorSubmit' type="submit" name="authorSubmit">Submit Edit</button>
+  </div>
+</div>

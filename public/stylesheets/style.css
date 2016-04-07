@@ -85,11 +85,25 @@ a {
   border: 1px solid blue;
   float: left;
 }
-.bookBooksSideBar {
+.booksBooksSideBar {
   height: 300px;
   width: 100%;
   border: 1px solid orange;
   float: left;
+  background-color: grey;
+}
+.authorBooksSideBar {
+  height: 300px;
+  width: 100%;
+  border: 1px solid orange;
+  float: left;
+}
+.authorsBooksSideBar {
+  height: 300px;
+  width: 100%;
+  border: 1px solid orange;
+  float: left;
+  background-color: grey;
 }
 .authorPictureBookPage {
   padding: 12%;
@@ -107,17 +121,113 @@ a {
   margin-top: -40%;
   margin-left: 20%;
 }
+.authorPageContent {
+  width: 65%;
+  height: 450px;
+  border: 1px solid blue;
+  margin-top: -40%;
+  margin-left: 20%;
+}
 .bookDiv {
-  width: 95%;
+  width: 100%;
   height: 155px;
   border: 1px solid red;
-  margin: 2.5%;
-
+  margin-bottom: 2.5%;
+  display: inline-block;
+}
+.authorDiv {
+  width: 100%;
+  height: 155px;
+  border: 1px solid red;
+  display: inline-block;
 }
 .bookDivContent {
-  width: 70%;
+  width: 80%;
   height: 155px;
-  overflow-y: auto;
   border: 1px solid green;
   float: right;
+}
+.authorDivContent {
+  width: 80%;
+  height: 155px;
+  border: 1px solid green;
+  float: right;
+}
+.bookDescription {
+  width: 75%;
+  height: 155px;
+  margin-top: -17.5%;
+  float: right;
+  border: 1px solid yellow;
+  overflow-y: auto;
+}
+.authorDescription {
+  width: 75%;
+  height: 155px;
+  margin-top: -9.5%;
+  float: right;
+  border: 1px solid yellow;
+  overflow-y: auto;
+}
+.authorBooks {
+  width: 100%;
+  height: 30px;
+  overflow-y: auto;
+  border: 1px solid blue;
+  margin-bottom: 2.5%;
+  float: right;
+}
+.authorPageContent input {
+  width: 40%;
+}
+.authorPageContent textarea {
+  width: 40%;
+  height: 20%;
+}
+.authorEditPageContent {
+  width: 50%;
+  height: 450px;
+  border: 1px solid black;
+  float: right;
+  margin-top: -34.5%;
+}
+.authorEditBooks {
+  border: 1px solid red;
+}
+.authorSelectBox {
+  width: 50%;
+  margin-left: 15%;
+}
+.authorSubmit {
+  margin-left: 30%;
+  width: 40%;
+}
+.bookPageContent input {
+  width: 40%;
+}
+.bookPageContent textarea {
+  width: 40%;
+  height: 20%;
+}
+.bookEditPageContent {
+  width: 50%;
+  height: 450px;
+  border: 1px solid black;
+  float: right;
+  margin-top: -34.5%;
+}
+.bookEditBooks {
+  border: 1px solid red;
+}
+.bookSelectBox {
+  margin-left: 30%;
+  width: 50%;
+}
+.bookSubmit {
+  margin-left: 30%;
+  width: 40%;
+}
+.deleteItem {
+  margin-left: 30%;
+  width: 40%;
 }
