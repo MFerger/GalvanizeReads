@@ -18,7 +18,7 @@ router.get('/authors/new', function(req, res, next) {
   res.render('authorNew');
 });
 router.get('/books/edit', function(req, res, next) {
-  res.render('booksEdit');
+  res.render('bookEdit');
 });
 router.get('/books/new', function(req, res, next) {
   res.render('bookNew');
