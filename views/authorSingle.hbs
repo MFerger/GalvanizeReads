@@ -9,15 +9,14 @@
   </div>
 </div>
 <div class="authorPageContent">
-  {{#result}}
   <div class="authorDiv">
-    <img src="{{portrait_url}}"style='height: 150px'/>
+    <img src="{{result.portrait_url}}"style='height: 150px'/>
     <div class="authorDivContent">
-      <a href='/authors/{{author_id}}'><h2>{{first_name}} {{last_name}}</h2></a>
+      <a href='/authors/{{result.author_id}}'><h2>{{result.first_name}} {{result.last_name}}</h2></a>
       <a href='/authors/edit'>Edit</a>
       <a href='/authors/delete'>Delete</a>
       <div class='authorDescription'>
-        <p>{{biography}}
+        <p>{{result.biography}}
         </p>
     </div>
   </div>
@@ -29,5 +28,4 @@
     </ol>
   </div>
 </div>
-{{/result}}
 </div>

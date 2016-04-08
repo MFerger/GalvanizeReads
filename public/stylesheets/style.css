@@ -31,7 +31,7 @@ a {
 .content {
   width: 100%;
   height: 600px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: inline-block;
 }
 .bodyMainPage {
@@ -88,20 +88,20 @@ a {
 .booksBooksSideBar {
   height: 300px;
   width: 100%;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   float: left;
   background-color: grey;
 }
 .authorBooksSideBar {
   height: 300px;
   width: 100%;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   float: left;
 }
 .authorsBooksSideBar {
   height: 300px;
   width: 100%;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   float: left;
   background-color: grey;
 }
@@ -117,64 +117,65 @@ a {
 .bookPageContent {
   width: 65%;
   height: 450px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   margin-top: -40%;
   margin-left: 20%;
 }
 .authorPageContent {
   width: 65%;
   height: 450px;
-  border: 1px solid blue;
-  margin-top: -40%;
+  /*border: 1px solid blue;*/
+  margin-top: -50%;
   margin-left: 20%;
 }
 .bookDiv {
   width: 100%;
   height: 155px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   margin-bottom: 2.5%;
   display: inline-block;
 }
 .authorDiv {
   width: 100%;
   height: 155px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   display: inline-block;
+  margin-top: 10%;
 }
 .bookDivContent {
   width: 80%;
   height: 155px;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   float: right;
 }
 .authorDivContent {
   width: 80%;
   height: 155px;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   float: right;
 }
 .bookDescription {
   width: 75%;
   height: 155px;
-  margin-top: -17.5%;
+  margin-top: -11%;
   float: right;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
   overflow-y: auto;
 }
 .authorDescription {
   width: 75%;
   height: 155px;
-  margin-top: -9.5%;
+  margin-top: -1%;
   float: right;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
   overflow-y: auto;
 }
 .authorBooks {
   width: 100%;
   height: 30px;
   overflow-y: auto;
-  border: 1px solid blue;
-  margin-bottom: 2.5%;
+  /*border: 1px solid blue;*/
+  margin-bottom: 3.5%;
   float: right;
 }
 .authorPageContent input {
