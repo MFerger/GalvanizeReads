@@ -10,23 +10,21 @@
 </div>
 <div class="authorPageContent">
   <div class="authorDiv">
-    <img src="{{authors.portrait_url}}"style='height: 150px'/>
+    <img src="{{result.portrait_url}}"style='height: 150px'/>
     <div class="authorDivContent">
-      <a href='/authors/{{authors.author_id}}'><h2>{{authors.first_name}} {{authors.last_name}}</h2></a>
-      <a href='/authors/edit'>Edit</a>
-      <a href='/authors/delete'>Delete</a>
+      <h2>{{result.first_name}} {{result.last_name}}</h2>
       <div class='authorDescription'>
-        <p>{{authors.biography}}
+        <p>{{result.biography}}
         </p>
     </div>
   </div>
   <div class="authorBooks">
     <ol>
-      {{#title}}
-        <li>{{this}}</li>
-      {{/title}}
+      {{#books}}
+        <li>{{title}}</li>
+      {{/books}}
     </ol>
   </div>
-  <button type="button" name="button">DELETE THIS MO FUKIN BOOK</button>
+  <button type="button" name="button">DELETE THIS</button>
 </div>
 </div>

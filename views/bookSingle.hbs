@@ -15,11 +15,11 @@
       <h4>{{result.title}}</h4>
       <h5>Author(s): </h5>
       {{#authors}}
-      {{first_name}}{{last_name}}<br>
+      {{first_name}} {{last_name}}<br>
       {{/authors}}
       <h5>Genre: {{result.genre}}</h5>
-      <a href='/books/edit'>Edit</a>
-      <a href='/edit'>Delete</a>
+      <a href='/books/{{result.id}}/edit'>Edit</a>
+      <a href='/books/{{result.id}}/delete'>Delete</a>
       <div class='bookSingleDescription'>
         <p>{{result.description}}</p>
     </div>

@@ -8,7 +8,7 @@
     <a href='/books'><h2 class='rotate'>Books<h2></a>
   </div>
 </div>
-<form method='post' action='/books/{{result.id}}/edit'>
+<form method='POST' action='/books/{{result.id}}/edit'>
   <div class="bookPageContent">
   <label>Title</label><br><input type="text" name="title" value="{{result.title}}"><br><br><br>
   <label>Genre</label><br><input type="text" name="genre" value="{{result.genre}}"><br><br><br>

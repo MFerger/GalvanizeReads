@@ -77,6 +77,7 @@ router.get('/books/:id', function(req, res, next) {
       .select('authors.first_name', 'authors.last_name')
       .then(function(author){
         console.log(author);
+        console.log(book);
         res.render('bookSingle', {result: book[0], authors: author});
       })
     })
@@ -193,7 +194,7 @@ router.get('/books/:id/edit', function(req,res,next){
 });
 router.get('/authors/:id', function(req, res, next) {
   return knex('authors')
-    .where('authors.id', req.params.id)
+    .where('id', req.params.id)
     .then(function(author){
       return knex('authors_books')
       .where('author_id', req.params.id)
@@ -202,7 +203,9 @@ router.get('/authors/:id', function(req, res, next) {
         return knex('books')
         .whereIn('books.id', bookId)
         .then(function(titles){
-        res.render('authorSingle', {result: author[0], books: titles});
+          console.log(titles);
+          console.log(author);
+        res.render('authorSingle', {result: author[0], title: titles});
       })
     })
   })
