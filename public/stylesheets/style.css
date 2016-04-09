@@ -106,9 +106,13 @@ a {
   background-color: grey;
 }
 .authorPictureBookPage {
+  height: 131px;
+  width: 131px;
   padding: 12%;
 }
 .bookPictureBookPage {
+  height: 131px;
+  width: 131px;
   padding: 12%;
 }
 .rotate {
