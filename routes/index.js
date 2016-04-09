@@ -51,6 +51,18 @@ router.get('/books/new', function(req, res, next) {
 res.render('bookNew', {authors: arr});
   })
 });
+router.post('/books/new', function(req,res,next){
+  //not working as expected --
+  // return knex('books')
+  // .insert({
+  //   title: req.body.title,
+  //   genre: req.body.genre,
+  //   description: req.body.description,
+  //   cover_url: req.body.cover_url
+  // }).then(function(){
+    res.redirect('/books')
+  // })
+})
 
 router.get('/books/:id', function(req, res, next) {
   return knex('books')
@@ -147,7 +159,6 @@ router.get('/authors/:id/edit', function(req, res, next) {
           knex('books')
           .pluck('title')
           .then(function(bookNames){
-
             res.render('authorEdit', {result: author[0], books: arr, bookNames: bookNames});
           })
       })
@@ -252,16 +263,17 @@ router.post('/authors/:id/edit', function(req,res, next){
       res.redirect('/authors')
     })
   })
-  router.post('/books/new', function(req,res,next){
-    return knex('books')
-    .insert({
+  router.post('/books/:id/edit', function(req, res, next) {
+  return knex('books')
+    .where({
+      id: req.params.id})
+    .update({
       title: req.body.title,
       genre: req.body.genre,
       description: req.body.description,
       cover_url: req.body.cover_url
-    })
-    .then(function(req,res,next){
+    }).then(function() {
       res.redirect('/books')
     })
-  })
+})
 module.exports = router;

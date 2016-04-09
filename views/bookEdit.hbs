@@ -8,12 +8,12 @@
     <a href='/books'><h2 class='rotate'>Books<h2></a>
   </div>
 </div>
-<form action="/books" method="POST">
-<div class="bookPageContent">
-  <label>Title</label><br><input type="text" name="bookEditTitle" value="{{result.title}}"><br><br><br>
-  <label>Genre</label><br><input type="text" name="bookEditGenre" value="{{result.genre}}"><br><br><br>
-  <label>Cover Image URL</label><br><input type="text" name="bookEditCoverImageUrl" value="{{result.cover_url}}"><br><br><br>
-  <label>Description</label><br><textarea name="bookEditDescription" value="">{{result.description}}</textarea>
+<form method='post' action='/books/{{result.id}}/edit'>
+  <div class="bookPageContent">
+  <label>Title</label><br><input type="text" name="title" value="{{result.title}}"><br><br><br>
+  <label>Genre</label><br><input type="text" name="genre" value="{{result.genre}}"><br><br><br>
+  <label>Cover Image URL</label><br><input type="text" name="cover_url" value="{{result.cover_url}}"><br><br><br>
+  <label>Description</label><br><textarea name="description" value="">{{result.description}}</textarea>
   <div class="bookEditPageContent">
     <div class="bookEditBooks">
       <label>Authors</label><br>

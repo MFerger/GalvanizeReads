@@ -10,18 +10,15 @@
 </div>
 <form action="/books/new" method="POST">
 <div class="bookPageContent">
-  <label>Title</label><br><input type="text" name="title" value=""><br><br><br>
-  <label>Genre</label><br><input type="text" name="genre" value=""><br><br><br>
-  <label>Cover Image URL</label><br><input type="text" name="cover_url" value=""><br><br><br>
-  <label>Biography</label><br><textarea name="description" value=""></textarea>
+  <label>Title</label><br><input type="text" name="title" ><br><br><br>
+  <label>Genre</label><br><input type="text" name="genre" ><br><br><br>
+  <label>Cover Image URL</label><br><input type="text" name="cover_url" ><br><br><br>
+  <label>Biography</label><br><textarea name="description" ></textarea>
   <div class="bookEditPageContent">
     <div class="bookEditBooks">
       <label>Authors</label><br>
       <ul>
         <li>Author 1 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Author 2 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Author 3 <a href='/delete/{{this}}'>Delete</a></li>
-      </ul>
     </div>
     <br>
     <div class="selectBox">
@@ -33,7 +30,6 @@
       <button type="button" name="addAuthor">Add Author</button>
     </div>
     <br><br>
-    <button class='bookSubmit' type="submit" >Add Book</button>
-  </div>
+    <input type="submit" value="Add Book"></div>
 </div>
 </form>
