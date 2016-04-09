@@ -10,21 +10,21 @@
 </div>
 <div class="authorPageContent">
   <div class="authorDiv">
-    <img src="{{result.portrait_url}}"style='height: 150px'/>
+    <img src="{{authors.portrait_url}}"style='height: 150px'/>
     <div class="authorDivContent">
-      <a href='/authors/{{result.author_id}}'><h2>{{result.first_name}} {{result.last_name}}</h2></a>
+      <a href='/authors/{{authors.author_id}}'><h2>{{authors.first_name}} {{authors.last_name}}</h2></a>
       <a href='/authors/edit'>Edit</a>
       <a href='/authors/delete'>Delete</a>
       <div class='authorDescription'>
-        <p>{{result.biography}}
+        <p>{{authors.biography}}
         </p>
     </div>
   </div>
   <div class="authorBooks">
     <ol>
-      {{#books}}
-        <li>{{title}}</li>
-      {{/books}}
+      {{#title}}
+        <li>{{this}}</li>
+      {{/title}}
     </ol>
   </div>
 </div>

@@ -1,29 +1,32 @@
 <div class="booksPageSideBar">
-  <div class="authorBooksSideBar">
+  <div class="authorsBooksSideBar">
     <img class='authorPictureBookPage' src="http://fillmurray.com/100/100"/>
     <a href='/authors'><h2 class='rotate'>Authors<h2></a>
   </div>
-  <div class="booksBooksSideBar">
+  <div class="authorBooksSideBar">
     <img class='bookPictureBookPage' src="http://fillmurray.com/100/100"/>
     <a href='/books'><h2 class='rotate'>Books<h2></a>
   </div>
 </div>
-<div class="bookPageContent">
-  <div class="bookDiv">
-    <img src="http://fillmurray.com/150/150"/>
-    <div class="bookDivContent">
-      <h2>Book Title</h2>
-      <h4>Author</h4>
-      <h4>Genre</h4>
-      <div class='bookDescription'>
-        <p>
-          all of the content will go here yaya dfsoaf jklas;dj flk;adsh fjkads hfdjhjk fkhds fsa hadfl ghaso fsp gha fjksdhsdkl hafbdsakj kjbf ksduizxc ufes;k hfg knsdg bdfjlak glall of the content will go here yaya dfsoaf jklas;dj flk;adsh fjkads hfdjhjk fkhds fsa hadfl ghaso fsp gha fjksdhsdkl hafbdsakj kjbf ksduizxc ufes;k hfg knsdg bdfjlak glall of the content will go here yaya dfsoaf jklas;dj flk;adsh fjkads hfdjhjk fkhds fsa hadfl ghaso fsp gha fjksdhsdkl hafbdsakj kjbf ksduizxc ufes;k hfg knsdg bdfjlak glall of the content will go here yaya dfsoaf jklas;dj flk;adsh fjkads hfdjhjk fkhds fsa hadfl ghaso fsp gha fjksdhsdkl hafbdsakj kjbf ksduizxc ufes;k hfg knsdg bdfjlak glall of the content will go here yaya dfsoaf jklas;dj flk;adsh fjkads hfdjhjk fkhds fsa hadfl ghaso fsp gha fjksdhsdkl hafbdsakj kjbf ksduizxc ufes;k hfg knsdg bdfjlak gl
+<div class="authorPageContent">
+  <div class="authorDiv">
+    <img src="{{authors.portrait_url}}"style='height: 150px'/>
+    <div class="authorDivContent">
+      <a href='/authors/{{authors.author_id}}'><h2>{{authors.first_name}} {{authors.last_name}}</h2></a>
+      <a href='/authors/edit'>Edit</a>
+      <a href='/authors/delete'>Delete</a>
+      <div class='authorDescription'>
+        <p>{{authors.biography}}
         </p>
     </div>
   </div>
+  <div class="authorBooks">
+    <ol>
+      {{#title}}
+        <li>{{this}}</li>
+      {{/title}}
+    </ol>
+  </div>
+  <button type="button" name="button">DELETE THIS MO FUKIN BOOK</button>
 </div>
-<br><br>
-<form action="/delete/{{this}}" method="post">
-<input class='deleteItem' type="submit" value="Delete Author">
-</form>
 </div>

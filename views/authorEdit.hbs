@@ -8,32 +8,32 @@
     <a href='/books'><h2 class='rotate'>Books<h2></a>
   </div>
 </div>
-<form action="/authors" method="POST">
+<form action="/authors/{{result.id}}/edit" method="POST">
 <div class="authorPageContent">
-  <label>First Name</label><br><input type="text" name="authorEditFirstName" value=""><br><br><br>
-  <label>Last Name</label><br><input type="text" name="authorEditLastName" value=""><br><br><br>
-  <label>Portriat URL</label><br><input type="text" name="authorEditPortriatUrl" value=""><br><br><br>
-  <label>Biography</label><br><textarea name="authorEditBiography" value=""></textarea>
+  <label>First Name</label><br><input type="text" name="authorEditFirstName" value="{{result.first_name}}"><br><br><br>
+  <label>Last Name</label><br><input type="text" name="authorEditLastName" value="{{result.last_name}}"><br><br><br>
+  <label>Portriat URL</label><br><input type="text" name="authorEditPortriatUrl" value="{{result.portrait_url}}"><br><br><br>
+  <label>Biography</label><br><textarea name="authorEditBiography" value="">{{result.biography}}</textarea>
   <div class="authorEditPageContent">
     <div class="authorEditBooks">
       <label>Authors</label><br>
       <ul>
-        <li>Book 1 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Book 2 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Book 3 <a href='/delete/{{this}}'>Delete</a></li>
+        {{#book}}
+        <li>{{title}}<a href='/books/{{id}}/delete'> Delete</a></li>
+        {{/book}}
       </ul>
     </div>
     <br>
     <div class="selectBox">
       <select class='authorSelectBox' name='authorEditSelect'>
-        <option value="value1" selected>Author 1</option>
-        <option value="value2">Author 2</option>
-        <option value="value3">Author 3</option>
+        {{#bookNames}}
+        <option value="{{title}}" selected>{{this}}</option>
+        {{/bookNames}}
       </select>
-      <button type="button" name="addAuthor">Add Author</button>
+      <button type="button" name="addAuthor">Add Book</button>
     </div>
-  </form>
     <br><br>
     <button class='authorSubmit' type="submit" name="authorSubmit">Submit Edit</button>
   </div>
+</form>
 </div>

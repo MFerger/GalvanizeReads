@@ -10,28 +10,26 @@
 </div>
 <form action="/books" method="POST">
 <div class="bookPageContent">
-  <label>Title</label><br><input type="text" name="bookEditTitle" value=""><br><br><br>
-  <label>Genre</label><br><input type="text" name="bookEditGenre" value=""><br><br><br>
-  <label>Cover Image URL</label><br><input type="text" name="bookEditCoverImageUrl" value=""><br><br><br>
-  <label>Biography</label><br><textarea name="bookEditDescription" value=""></textarea>
+  <label>Title</label><br><input type="text" name="bookEditTitle" value="{{result.title}}"><br><br><br>
+  <label>Genre</label><br><input type="text" name="bookEditGenre" value="{{result.genre}}"><br><br><br>
+  <label>Cover Image URL</label><br><input type="text" name="bookEditCoverImageUrl" value="{{result.cover_url}}"><br><br><br>
+  <label>Description</label><br><textarea name="bookEditDescription" value="">{{result.description}}</textarea>
   <div class="bookEditPageContent">
     <div class="bookEditBooks">
       <label>Authors</label><br>
       <ul>
-        <li>Author 1 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Author 2 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Author 3 <a href='/delete/{{this}}'>Delete</a></li>
+        {{#books}}
+        <li>{{this.first}} {{this.last}} <a href='/delete/{{id}}/delete'>Delete</a></li>
+        {{/books}}
       </ul>
     </div>
     <br>
-    <div class="selectBox">
-      <select class='bookSelectBox' name='bookEditSelect'>
-        <option value="value1" selected>Author 1</option>
-        <option value="value2">Author 2</option>
-        <option value="value3">Author 3</option>
-      </select>
+    <!-- <div class="selectBox"> -->
+      {{#names}}
+      <input type="checkbox" name="authorBookEdit" value="">{{this.first_name}} {{this.last_name}}</input><br>
+      {{/names}}
       <button type="button" name="addAuthor">Add Author</button>
-    </div>
+    <!-- </div> -->
   </form>
     <br><br>
     <button class='bookSubmit' type="submit" name="bookSubmit">Submit Edit</button>

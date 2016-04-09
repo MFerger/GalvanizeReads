@@ -8,12 +8,12 @@
     <a href='/books'><h2 class='rotate'>Books<h2></a>
   </div>
 </div>
-<form action="/books" method="POST">
+<form action="/books/new" method="POST">
 <div class="bookPageContent">
-  <label>Title</label><br><input type="text" name="bookEditTitle" value=""><br><br><br>
-  <label>Genre</label><br><input type="text" name="bookEditGenre" value=""><br><br><br>
-  <label>Cover Image URL</label><br><input type="text" name="bookEditCoverImageUrl" value=""><br><br><br>
-  <label>Biography</label><br><textarea name="bookEditDescription" value=""></textarea>
+  <label>Title</label><br><input type="text" name="title" value=""><br><br><br>
+  <label>Genre</label><br><input type="text" name="genre" value=""><br><br><br>
+  <label>Cover Image URL</label><br><input type="text" name="cover_url" value=""><br><br><br>
+  <label>Biography</label><br><textarea name="description" value=""></textarea>
   <div class="bookEditPageContent">
     <div class="bookEditBooks">
       <label>Authors</label><br>
@@ -26,14 +26,14 @@
     <br>
     <div class="selectBox">
       <select class='bookSelectBox' name='bookEditSelect'>
-        <option value="value1" selected>Author 1</option>
-        <option value="value2">Author 2</option>
-        <option value="value3">Author 3</option>
+        {{#authors}}
+        <option value="{{names}}" selected>{{names}}</option>
+        {{/authors}}
       </select>
       <button type="button" name="addAuthor">Add Author</button>
     </div>
-  </form>
     <br><br>
-    <button class='bookSubmit' type="submit" name="bookSubmit">Add Book</button>
+    <button class='bookSubmit' type="submit" >Add Book</button>
   </div>
 </div>
+</form>

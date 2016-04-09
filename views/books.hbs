@@ -9,12 +9,13 @@
   </div>
 </div>
 <div class="bookPageContent">
-  {{#result}}
+  {{#blah}}
   <div class="bookDiv">
-    <img src="http://fillmurray.com/150/150"/>
+    <img src="{{cover_url}}"style='height: 150px'/>
     <div class="bookDivContent">
-      <h4>{{title}}</h4>
-      <h5>Author{{author}}</h5>
+      <a href='/books/{{id}}'><h4>{{title}}</h4></a>
+      <h5>Author(s): </h5>
+      {{authors}}
       <h5>Genre: {{genre}}</h5>
       <a href='/books/edit'>Edit</a>
       <a href='/edit'>Delete</a>
@@ -23,5 +24,5 @@
     </div>
   </div>
 </div>
-{{/result}}
+{{/blah}}
 </div>

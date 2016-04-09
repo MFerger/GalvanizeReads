@@ -125,7 +125,6 @@ a {
   width: 65%;
   height: 450px;
   /*border: 1px solid blue;*/
-  margin-top: -50%;
   margin-left: 20%;
 }
 .bookDiv {
@@ -157,7 +156,15 @@ a {
 .bookDescription {
   width: 75%;
   height: 155px;
-  margin-top: -11%;
+  margin-top: -5%;
+  float: right;
+  /*border: 1px solid yellow;*/
+  overflow-y: auto;
+}
+.bookSingleDescription {
+  width: 75%;
+  height: 155px;
+  margin-top: -12%;
   float: right;
   /*border: 1px solid yellow;*/
   overflow-y: auto;
@@ -172,7 +179,7 @@ a {
 }
 .authorBooks {
   width: 100%;
-  height: 30px;
+  height: 75px;
   overflow-y: auto;
   /*border: 1px solid blue;*/
   margin-bottom: 3.5%;
@@ -181,6 +188,9 @@ a {
 .authorPageContent input {
   width: 40%;
 }
+.authorPageContent {
+  margin-top: -40.5%;
+}
 .authorPageContent textarea {
   width: 40%;
   height: 20%;
@@ -188,12 +198,12 @@ a {
 .authorEditPageContent {
   width: 50%;
   height: 450px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   float: right;
   margin-top: -34.5%;
 }
 .authorEditBooks {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .authorSelectBox {
   width: 50%;
@@ -213,12 +223,12 @@ a {
 .bookEditPageContent {
   width: 50%;
   height: 450px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   float: right;
   margin-top: -34.5%;
 }
 .bookEditBooks {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .bookSelectBox {
   margin-left: 30%;

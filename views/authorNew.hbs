@@ -18,22 +18,22 @@
     <div class="authorEditBooks">
       <label>Authors</label><br>
       <ul>
-        <li>Book 1 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Book 2 <a href='/delete/{{this}}'>Delete</a></li>
-        <li>Book 3 <a href='/delete/{{this}}'>Delete</a></li>
+        {{#books}}
+        <li>{{title}}<a href='/books/{{id}}/delete'> Delete</a></li>
+        {{/books}}
       </ul>
     </div>
     <br>
     <div class="selectBox">
       <select class='authorSelectBox' name='authorEditSelect'>
-        <option value="value1" selected>Author 1</option>
-        <option value="value2">Author 2</option>
-        <option value="value3">Author 3</option>
+        {{#bookNames}}
+        <option value="{{title}}" selected>{{this}}</option>
+        {{/bookNames}}
       </select>
-      <button type="button" name="addAuthor">Add Author</button>
+      <button type="button" name="addAuthor">Add Book</button>
     </div>
   </form>
     <br><br>
-    <button class='authorSubmit' type="submit" name="authorSubmit">Add Author</button>
+    <button class='authorSubmit' type="submit" name="authorSubmit">Submit Edit</button>
   </div>
 </div>

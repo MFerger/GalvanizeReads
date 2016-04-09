@@ -10,7 +10,7 @@
 </div>
 <div class="bookPageContent">
   <div class="bookDiv">
-    <img src="http://fillmurray.com/150/150"/>
+    <img src="{{result.cover_url}}"style='height: 150px'/>
     <div class="bookDivContent">
       <h4>{{result.title}}</h4>
       <h5>Author(s): </h5>
@@ -20,7 +20,7 @@
       <h5>Genre: {{result.genre}}</h5>
       <a href='/books/edit'>Edit</a>
       <a href='/edit'>Delete</a>
-      <div class='bookDescription'>
+      <div class='bookSingleDescription'>
         <p>{{result.description}}</p>
     </div>
   </div>
